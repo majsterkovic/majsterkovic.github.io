@@ -9,7 +9,7 @@
 ?>
 
 <?php
-    if (isset($_POST['submitbtn']))
+    if (isset($_POST['submit']))
     {
         if (mail($to, $email_subject, $body, $from))
         {
