@@ -20,4 +20,6 @@
         echo "<font color=\"red\"><p>Your message sending has failed! Please manually email (your email)!</p></font>";
         }
     }
+    header("location:index.html");    
+
 ?>
