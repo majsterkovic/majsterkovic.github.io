@@ -119,6 +119,20 @@
     				$body = "Name: $name\nE-mail: $email\n\nThe message is below:\n$message";;
 				?>
 
+				<?php
+					if (isset($_POST['submitbtn']))
+					{
+						if (mail($to, $email_subject, $body, $from))
+						{
+							echo "<font color=\"green\"><p>Your message has been sent!</p></font>";
+						}
+						else
+						{
+						echo "<font color=\"red\"><p>Your message sending has failed! Please manually email (your email)!</p></font>";
+						}
+					}
+				?>
+
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Pozostań w kontakcie</h2>
@@ -141,7 +155,7 @@
 											</div>
 										</div>
 										<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submitbtn" value="Send Message"/></li>
 										</ul>
 									</form>
 								</section>
