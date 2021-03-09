@@ -35,6 +35,7 @@
 
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						
 						<div class="inner">
 							<h1>majsterkovic</h1>
 							<p>Jestem studentem informatyki na drugim semstrze.</p>
@@ -42,6 +43,7 @@
 								<li><a href="#one" class="button scrolly">Więcej</a></li>
 							</ul>
 						</div>
+						
 					</section>
 
 				<!-- One -->
@@ -106,13 +108,24 @@
 					</section>
 
 				<!-- Three -->
+
+				<?php
+					$name = $_POST['name'];
+					$email = $_POST['email'];
+					$message = $_POST['message'];
+					$from = 'From: majsterkovic@github.io';
+   					$to = 'majsterkovic@gmail.com';
+     				$email_subject = 'New Contact Form Submission!';
+    				$body = "Name: $name\nE-mail: $email\n\nThe message is below:\n$message";;
+				?>
+
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Pozostań w kontakcie</h2>
 							<p>Jeśli chcesz się ze mną skontaktować, pisz!</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="index.php">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Imię</label>
@@ -128,7 +141,7 @@
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Wyślij wiadomość</a></li>
+										<li><input type="submit" value="Send Message" class="primary" /></li>
 										</ul>
 									</form>
 								</section>
